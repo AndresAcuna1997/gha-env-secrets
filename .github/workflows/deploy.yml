@@ -9,9 +9,9 @@ env:
 jobs:
   test:
     env:
-      MONGODB_CLUSTER_ADDRESS: test.vzjxv.mongodb.net
-      MONGODB_USERNAME: bonno
-      MONGODB_PASSWORD: linda 
+      MONGODB_CLUSTER_ADDRESS: ${{secrets.MONGODB_CLUSTER_ADDRESS}}}
+      MONGODB_USERNAME: ${{secrets.MONGODB_USERNAME}}
+      MONGODB_PASSWORD: ${{secrets.MONGODB_PASSWORD}}
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
